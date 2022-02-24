@@ -18,6 +18,7 @@ namespace SE.Game.Gameplay
         private async void Start()
         {
             await Init(shipDataStorage.data[0], "");
+            
         }
 
         public override void InstallBindings()
@@ -28,7 +29,7 @@ namespace SE.Game.Gameplay
         private async UniTask Init(Ship ship, string subShip)
         {
             shipBehaviour.SetShipData(ship);
-
+            await shipBehaviour.Init();
             await UniTask.Yield();
         }
     }

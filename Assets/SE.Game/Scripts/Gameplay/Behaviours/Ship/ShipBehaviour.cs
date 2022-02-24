@@ -14,23 +14,25 @@ namespace SE.Game
     public partial class ShipBehaviour : MonoBehaviour, IShip
     {
         [Header("PROPERTIES")]
-        [ReadOnly] public Ship shipData;
+        [ReadOnly, HideInInspector] public Ship shipData;
 
         [SerializeField] private float _duration = 0.3f;
+        [SerializeField] private Transform backfireOriginPos = null;
 
         private async void Start()
         {
-            await Init();
+            
         }
         private void Update()
         {
             Move();
         }
 
-        private async UniTask Init()
+        public async UniTask Init()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
-
+            var backfire = GameObject.Instantiate(shipData.shipSprites.BackFirePrefab, backfireOriginPos);
+            backfire.transform.SetParent(backfireOriginPos);
             await UniTask.Yield();
         }
 
@@ -42,6 +44,16 @@ namespace SE.Game
         public void Move()
         {
             var pos = joystick.Direction;
+
+            if(pos != Vector2.zero)
+            {
+                backfireOriginPos.gameObject.SetActive(true);
+            }
+            else
+            {
+                backfireOriginPos.gameObject.SetActive(false);
+            }
+
             if(pos.x > 0.3f)
             {
                 spriteRenderer.sprite = shipData.shipSprites.Right;
