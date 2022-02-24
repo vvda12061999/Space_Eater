@@ -19,7 +19,13 @@ MonoBehaviour:
       Left: {fileID: 5775197789783523982, guid: 9b42608fcbd42b744a1f20354ad08c6a, type: 3}
       Center: {fileID: 5484112813005365746, guid: 9b42608fcbd42b744a1f20354ad08c6a, type: 3}
       Right: {fileID: 2533137402189477160, guid: 9b42608fcbd42b744a1f20354ad08c6a, type: 3}
-      BackFirePrefab: {fileID: 0}
+      BackFirePrefab: {fileID: 9036084743234545403, guid: 39c64406b073ca54e983490b65081b44, type: 3}
+    shipBulletVariable:
+      level_1: {fileID: 0}
+      level_2: {fileID: 0}
+      level_3: {fileID: 0}
+      level_4: {fileID: 0}
+      level_5: {fileID: 0}
     shipName: 
     description: 
     health:
@@ -34,8 +40,20 @@ MonoBehaviour:
       level_3: 0
       level_4: 0
       level_5: 0
+    attackSpeed:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
     defend:
       level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
+    movementSpeed:
+      level_1: 1.2
       level_2: 0
       level_3: 0
       level_4: 0
@@ -47,6 +65,12 @@ MonoBehaviour:
       Center: {fileID: 0}
       Right: {fileID: 0}
       BackFirePrefab: {fileID: 0}
+    shipBulletVariable:
+      level_1: {fileID: 0}
+      level_2: {fileID: 0}
+      level_3: {fileID: 0}
+      level_4: {fileID: 0}
+      level_5: {fileID: 0}
     shipName: 
     description: 
     health:
@@ -61,7 +85,19 @@ MonoBehaviour:
       level_3: 0
       level_4: 0
       level_5: 0
+    attackSpeed:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
     defend:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
+    movementSpeed:
       level_1: 0
       level_2: 0
       level_3: 0

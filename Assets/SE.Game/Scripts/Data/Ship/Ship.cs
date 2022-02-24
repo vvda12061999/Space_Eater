@@ -15,6 +15,8 @@ namespace SE.Game.Data
         public EShipClass shipClass;
         [Header("SHIP SPRITES")]
         public ShipSprites shipSprites;
+        [Header("BULLETS")]
+        public ShipBulletVariable shipBulletVariable;
         [Header("SHIP STRINGS")]
         public string shipName;
         [TextArea(5, 10)] public string description;
@@ -23,7 +25,7 @@ namespace SE.Game.Data
         public IntShipVariable attack;
         public FloatShipVariable attackSpeed;
         public IntShipVariable defend;
-        public FloatShipVariable movementSpeed;
+        public float movementSpeed;
     }
 
     public enum EShipClass { Space, Ranger, Crawler }
@@ -37,6 +39,15 @@ namespace SE.Game.Data
         public GameObject BackFirePrefab;
     }
     [System.Serializable]
+    public struct ShipBulletVariable
+    {
+        public GameObject level_1;
+        public GameObject level_2;
+        public GameObject level_3;
+        public GameObject level_4;
+        public GameObject level_5;
+    }
+    [System.Serializable]
     public struct IntShipVariable
     {
         public int level_1;
@@ -45,6 +56,7 @@ namespace SE.Game.Data
         public int level_4;
         public int level_5;
     }
+    [System.Serializable]
     public struct FloatShipVariable
     {
         public float level_1;

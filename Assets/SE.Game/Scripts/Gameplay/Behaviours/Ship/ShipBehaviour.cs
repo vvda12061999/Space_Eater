@@ -16,7 +16,7 @@ namespace SE.Game
         [Header("PROPERTIES")]
         [ReadOnly, HideInInspector] public Ship shipData;
 
-        [SerializeField] private float _duration = 0.3f;
+        [SerializeField] private const float _SMOOTHNESS = 0.3f;
         [SerializeField] private Transform backfireOriginPos = null;
 
         private async void Start()
@@ -26,13 +26,19 @@ namespace SE.Game
         private void Update()
         {
             Move();
+
+            if (Input.GetKey(KeyCode.X))
+                ObjectPooler.Instance.GetPooledObject("Test");
         }
 
         public async UniTask Init()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
-            var backfire = GameObject.Instantiate(shipData.shipSprites.BackFirePrefab, backfireOriginPos);
-            backfire.transform.SetParent(backfireOriginPos);
+            if (shipData.shipSprites.BackFirePrefab != null)
+            {
+                var backfire = GameObject.Instantiate(shipData.shipSprites.BackFirePrefab, backfireOriginPos);
+                backfire.transform.SetParent(backfireOriginPos);
+            }
             await UniTask.Yield();
         }
 
@@ -70,7 +76,7 @@ namespace SE.Game
             pos.x += transform.position.x;
             pos.y += transform.position.y;
 
-            transform.DOMove(pos, _duration);
+            transform.DOMove(pos, shipData.movementSpeed * _SMOOTHNESS);
         }
 
         public void ReceiveDamage()
