@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c64f5aa30e55e4488eb30a65c3a9bb, type: 3}
+  m_Name: Ship Data Storage
+  m_EditorClassIdentifier: 
+  data:
+  - ID: 323eb456-e641-4b35-9500-b8e612330482
+    shipClass: 0
+    shipSprites:
+      Left: {fileID: 5775197789783523982, guid: 9b42608fcbd42b744a1f20354ad08c6a, type: 3}
+      Center: {fileID: 5484112813005365746, guid: 9b42608fcbd42b744a1f20354ad08c6a, type: 3}
+      Right: {fileID: 2533137402189477160, guid: 9b42608fcbd42b744a1f20354ad08c6a, type: 3}
+      BackFirePrefab: {fileID: 0}
+    shipName: 
+    description: 
+    health:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
+    attack:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
+    defend:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
+  - ID: 07626161-6ece-4421-a861-82c6dea2da81
+    shipClass: 0
+    shipSprites:
+      Left: {fileID: 0}
+      Center: {fileID: 0}
+      Right: {fileID: 0}
+      BackFirePrefab: {fileID: 0}
+    shipName: 
+    description: 
+    health:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
+    attack:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
+    defend:
+      level_1: 0
+      level_2: 0
+      level_3: 0
+      level_4: 0
+      level_5: 0
